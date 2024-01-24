@@ -1,24 +1,25 @@
+# MicroController
 
-> Abrir essa página em [https://esdraslov.github.io/microcontroller-mb/](https://esdraslov.github.io/microcontroller-mb/)
+## importation
 
-## Usar como extensão
+* click "extensions" at the left
+* search by **https://github.com/esdraslov/microcontroller-mb**
+* import the first extension
 
-Este repositório pode ser adicionado como **extensão** no MakeCode.
+## blocks usage
 
-* abrir [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* clique em **Novo Projeto**
-* clique em **Extensões** em baixo do menu com ícone de engrenagem
-* procure por **https://github.com/esdraslov/microcontroller-mb** e importe
+### set id to (ID) - (microcontroller.setId)
 
-## Editar este projeto
+set the id of THIS micro:bit for pair
 
-Para editar este repositório no MakeCode.
+### allow pair? <ALLOW> - (microcontroller.pairAllow)
 
-* abrir [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* clique em **Importar** e depois clique em **Importar URL**
-* cole **https://github.com/esdraslov/microcontroller-mb** e clique em importar
+allow pair if requested and parameter ALLOW is true
 
-#### Metadados (usados para pesquisa, renderização)
+### pair requested - (microcontroller.pairRequested)
 
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+return true when a pair is requested, otherwise, return false
+
+### send [BUTTON] - (microcontroller.send)
+
+send a button to the paired device
