@@ -13,7 +13,9 @@ namespace microController {
         //% block="B"
         B,
         //% block="Head (v2 only)",
-        Head
+        Head,
+        //% block="None",
+        None
     }
 
     //% block="set id to %id%"
@@ -34,6 +36,10 @@ namespace microController {
 
     //% block
     export function send(button: Button) {
-        radio.sendNumber(button)
+        if (button < 3) {
+            radio.sendNumber(button)
+        } else {
+            radio.sendNumber(-1)
+        }
     }
 }
